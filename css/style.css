@@ -3,6 +3,7 @@
     margin: 0;
 }
 body {
+    margin: 0;
     font-family: 'Lato';
     font-style: normal;
 }
@@ -11,6 +12,10 @@ body {
     padding: 18px 0;
 }
 .center {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-between;
     width: 100%;
     max-width: 1140px;
     margin: 0 auto;
@@ -18,12 +23,11 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content:space-between;
 }
-
 .header-logo {
-    margin: 0 858px 0 auto;
+    display: flex;
 }
 
 .logo {
@@ -32,9 +36,53 @@ body {
     margin: 0 41px 0 0;
 }
 
-.search {
-    width: 27px;
-    height: 27px;
+.header-search-form {
+    width: 26px;
+    min-height: 26px;
+    position: relative;
+}
+
+.header-search-btn {
+    width: 20px;
+    min-height: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: -1px;
+    left: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial;
+    text-transform: capitalize;
+}
+.search-icon-form-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+.search-icon-form-label:hover .search-icon-form-svg {
+    fill: gold;
+  }
+.search-icon-form-label:active .search-icon-form-svg  {
+        fill: green
+}
+.search-icon-form-svg {
+    width: 20px;
+    min-height: 20px;
+    padding: 5px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 40px;
+    left: -119px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial;
+    text-transform: capitalize;
 }
 
 .heder-group {
@@ -59,22 +107,29 @@ body {
     height: 29px;
 }
 
-
 .top-page {
-    background: #F1E4E6;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 764px;
+    background-color: #F1E4E6;
+    padding: 0 0; 
 }
 
 .top-page-content {
     display: flex; 
-} 
-
-.top-photo {
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 764px;
     background-image: url(../img/photo1.png);
-    max-width: 800px;
-    width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: bottom left -225px;
+}
+
+.text {
+    display: block;
+    max-width: 377px;
+    width: 100%;
+    border-left: 12px #F16D7F solid;padding: 0 0 0 10px; 
 }
 
 .title {
@@ -82,8 +137,8 @@ body {
     font-size: 48px;
     line-height: 58px;
     color: #222222;
-    max-width: 377px;
-    margin:300px auto 381px 63px;
+    text-transform: uppercase;
+    position: relative;
 }
 
 .page-title {
@@ -92,37 +147,94 @@ body {
     line-height: 38px;
     color: #222222;
 }
-.top-title {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
+.page-title span {
     color: #F16D7F;
 }
 
-.sections {
+.categories {
+    width: 100%;
     padding: 65px 0 96px 0;
 }
 
-.sections-group {}
+.categories-group-item {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.sections-group-item {
+.category-item {
+    width: 100%;
+    max-width: 360px;
+    min-height: 260px;
+    margin: 0 0 30px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    gap: 30px;
-}
-.section-item {}
-
-.section {
-    margin: 30px 0 0 0;
+    align-items: center;
 }
 
-.sections-catalog {
+.category-item:nth-child(1) {
+    background-image: url(../img/women.png);
+}
+
+.category-item:nth-child(2) {
+    background-image: url(../img/men.png);
+}
+
+.category-item:nth-child(3) {
+    background-image: url(../img/kids.png);
+}
+
+.category-item:nth-child(4) {
+    width: 100%;
+    background-image: url(../img/accesories.png);
+}
+
+.category-item4 {
+    width: 100%;
+    max-width: 1140px;
+    height: 260px;
+    background-image: url(../img/accesories.png);
+    margin: 0 0 30px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-blok {}
+
+.text-item, .title-item {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+}
+.text-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.title-item {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #F16D7F;
+}
+
+.products-catalog {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.sections-catalog-title {
+.products-catalog-title {
     text-align: center;
     font-weight: 400;
     font-size: 30px;
@@ -130,7 +242,7 @@ body {
     color: #222222;
 }
 
-.sections-catalog-txt {
+.products-catalog-txt {
     text-align: center;
     margin: 6px 0 48px 0;
     font-weight: 400;
@@ -141,6 +253,7 @@ body {
 
 .catalog {
     max-width: 1140px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 360px);
     gap: 30px;
@@ -151,7 +264,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     background: #F8F8F8;
-}
+} 
 
 .catalog-photo {
     max-width: 360px;
@@ -159,13 +272,15 @@ body {
 }
 
 .info-item {
-    padding: 24px 29px 20px 17px; 
+    padding: 10px 29px 0 17px;
+    display: flex; 
+    flex-direction: column;
 }
 
 .catalog-title {
     font-weight: 400;
     font-size: 13px;
-    line-height: 16px;
+    line-height: 32px;
     color: #000000;
 }
 
@@ -179,19 +294,143 @@ body {
 .price {
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 38px;
     color: #F16D7F;
 }
 
 .catalog-btn {
-    margin: 48px auto 60px auto;
-    width: 212px;
-    height: 48px;
-    font-family: 'Lato';
-    font-style: normal;
+    box-sizing: border-box;
+    margin: 48px auto 95px auto;
+    max-width: 212px;
+    width: 100%;
+    min-height: 48px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: #F26376;
-    border: 1px solid #FF6A6A
+    border: 1px solid #FF6A6A;
+    text-align: center;
+    word-break: break-all;
 }
+.catalog-btn:hover {
+    color: #fff;
+    background: #F16D7F;
+    border: 1px solid #fff;
+}
+
+.catalog-btn:active {
+    color: #F26376;
+     background: #fff;
+    border: 1px solid #FF6A6A;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .top-page {
+        min-height: 368px;
+    }
+    .top-page-content {
+        min-height: 368px;
+        background-position: bottom left -5px;
+    }
+    
+    .text {
+        max-width: 311px;
+        width: 100%;
+    }
+    .title {
+        font-size: 44px;
+        line-height: 53px;
+    }
+    .page-title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .top-title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .categories {
+        padding: 65px 0 110px 0;
+    }
+    .categories-group-item {
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+    }
+
+    .category-item {
+        max-width: 233px;
+        min-height: 167px;
+        margin: 0 0 0 0;
+    }
+    .category-item4 {
+        max-width: 735px;
+        height: 116px;
+    }
+    .products-catalog-txt {
+        margin: 3px 0 73px 0;
+    }
+    .catalog {
+    grid-template-columns: repeat(2, 360px);
+    justify-content: center;
+    gap: 14px;
+    }
+    .catalog-btn {
+        margin: 32px auto 64px auto;
+    }
+}
+@media (max-width: 767px) {
+    .center {
+        
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+    }
+    .title {
+        font-weight: 900;
+        font-size: 38px;
+        line-height: 46px;
+    }
+    
+    .page-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .top-page-content {
+        min-height: 363px;
+        background-image: none;
+    }
+    .categories {
+        padding: 64px 0 64px 0;
+    }
+    .category-item {
+        max-width: 343px;
+        min-height: 247px;
+    }
+    .category-item4 {
+        max-width: 343px;
+        height: 111px;
+    }
+    .products-catalog-txt {
+        margin: 3px 0 64px 0;
+    }
+    .catalog-item {
+        max-width: 359px;
+        width: 100%;
+        margin: 0 8px 16px 8px;
+    }
+    .catalog {
+        display: block;
+        justify-content: center;
+        
+        }
+    .catalog-btn {
+        margin: 24px auto 96px auto;
+    }
