@@ -9,7 +9,7 @@ body {
 }
 .top-header {
     background: #222222;
-    padding: 18px 0;
+    padding: 18px 0;  
 }
 .center {
     display: flex;
@@ -18,6 +18,7 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 1140px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -159,6 +160,7 @@ body {
 .categories-group-item {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .category-item {
@@ -324,6 +326,204 @@ body {
     border: 1px solid #FF6A6A;
 }
 
+.features {
+    background-color: #222224;
+    width: 100%;
+    min-height: 341px;
+    box-sizing: border-box;
+    padding: 104px 0;
+}
+.features-list {
+    list-style: none;
+}
+.features-item {
+    max-width: 360px;
+    width: 100%;
+    min-width: 134px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 32px;
+}
+
+.features-item-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FBFBFB;
+}
+
+.features-item-txt {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
+
+.subscribe {
+    background-image: url(../img/subscribe.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    min-height: 448px;
+    height: 100%;
+    display: flex;
+}
+.subscribe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    max-height: 225px;
+}
+.subscribe-photo {
+    width: 96px;
+    height: 96px;
+    margin: 0 0 30px 0;
+}
+.subscribe-txt {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+}
+
+.subscribe-form-wrp {
+    max-width: 349px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 557px;
+    max-height: 142px;
+    padding: 0 100px;
+}
+.subscribe-form-title .subscribe-form-subtitle {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222224;
+}
+.subscribe-form-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.subscribe-form-subtitle {
+    margin: 0 0 32px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    min-height: 49px;
+
+}
+.subscribe-form-email {
+    padding: 17px 45px 17px 22px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #E1E1E1;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+.button-form {
+    display: block;
+    padding: 17px 25px 17px 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background-color: #E05C6E;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.button-form:hover {
+    background-color: #fff;
+    color: #E05C6E;
+}
+  
+.button-form:active {
+    background-color: #E05C6E;
+    color: #fff;
+}
+
+.copyright {
+    min-height: 79px;
+    width: 100%;
+    display: flex;
+    background-color: #222224;
+}
+.copyright-txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+}
+.socials-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 148px;
+}
+
+.socials-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+}
+
+.socials-item svg {
+    fill: #000;
+    margin: auto;
+}
+
+.socials-item:hover svg {
+    fill: #F16D7F;
+}
+  
+.socials-item:active {
+    background-color: #F16D7F;
+}
+  
+.socials-item:active svg {
+    fill: #fff;
+}
+
+.socials-item-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+
+
 @media (max-width: 1024px) {
     .center {
         width: 100%;
@@ -376,15 +576,46 @@ body {
         margin: 3px 0 73px 0;
     }
     .catalog {
-    grid-template-columns: repeat(2, 360px);
-    justify-content: center;
-    gap: 14px;
+        grid-template-columns: repeat(2, 360px);
+        justify-content: center;
+        gap: 14px;
     }
     .catalog-btn {
         margin: 32px auto 64px auto;
     }
+
+    .features {
+        padding: 48px 20px 64px 20px;
+        flex-direction: column;
+    }
+    .features-list {
+        flex-direction: column;
+    }
+    .features-item {
+        margin: 0 auto 48px auto;
+    }
+    .subscribe {
+        background-position: 26% 68px;
+        background-size: cover;
+        flex-direction: column;
+        padding: 64px 0 140px 0;
+    }
+    .subscribe .center {
+        flex-direction: column;
+        align-content: center; 
+    }
+    .subscribe-photo {
+        /*padding: 64px 20px 30px 20px;*/
+    }
+    .subscribe-txt {
+        margin: 30px 0 0 0;
+    }
+    .copyright {
+        padding: 0 32px;
+    }
+    
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .center {
         
         width: 100%;
@@ -434,3 +665,50 @@ body {
     .catalog-btn {
         margin: 24px auto 96px auto;
     }
+    .features {
+        padding: 48px 20px 64px 20px;
+        flex-direction: column;
+    }
+    .features-list {
+        flex-direction: column;
+    }
+    .features-item {
+        margin: 0 auto 48px auto;
+    }
+    .subscribe {
+        min-height: auto;
+        padding: 64px 20px 140px 20px;
+        background-position: 26% 68px;
+        background-size: cover;
+    }
+    /*.center {
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+    }*/
+    .subscribe-txt {
+        margin: 0 0 48px 0;
+    }
+
+    .copyright {
+        min-height: auto;
+        padding: 43px 32px 9px 32px;
+    }
+    .copyright .center {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+    }
+    .copyright-txt {
+        order: 2;
+        max-width: 251px;
+    }
+    .socials-list {
+        max-width: 147px;
+        margin: 0 0 40px 0;
+        order: 1;
+    }
+
+   
+
+}
